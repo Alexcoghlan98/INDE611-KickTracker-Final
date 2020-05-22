@@ -1,0 +1,213 @@
+html
+
+body {
+  width: 100%;
+height: 100%;
+background-image: url(images/grasstexture.jpg);
+}
+
+h1 {
+  text-align: center;
+  color: #157F1F;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif; /* this is the main font that i chose for web app */
+  -webkit-text-stroke-width: 1px; /* this is the outline stroke for the title text */
+  -webkit-text-stroke-color: black; /* this is the colour of the outline stroke */
+}
+
+h3 {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+}
+
+h4 {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+
+h5 {
+  text-align: center;
+  color: #157F1F;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 55px;
+  -webkit-text-stroke-width: 1px; /* this is the outline stroke for the title text */
+  -webkit-text-stroke-color: black; /* this is the colour of the outline stroke */
+}
+
+p {
+  text-align: center;
+  color: #157F1F;
+  font-size: 65px;
+  padding-left: 0px;
+  margin-bottom: auto;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: black;
+}
+
+image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 30%;
+  max-height: 30%;
+  margin: auto;
+  overflow: auto;
+  background-size: contain;
+}
+
+
+.boxed {
+  border: 4px solid black ;
+  background-color: #4D4D4D;
+  opacity: 0.9;
+  position: fixed;
+  border-radius: 35px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 70%;
+    max-height: 85%;
+    margin: auto;
+    overflow: auto;
+}
+
+.boxed1 {
+  border: 4px solid black;
+  background-color: #090909;
+  position: fixed;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 30%;
+    max-height: 35%;
+    margin: auto;
+    overflow: auto;
+  /* width: 400px;
+  height: 350px;
+  margin-left: 190px;
+  margin-top: 20px; */
+}
+
+.boxed2 {
+  border: 4px solid black ;
+  background-color: #4D4D4D;
+  opacity: 0.9;
+  position: fixed;
+  border-radius: 35px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 25%;
+    max-height: 30%;
+    margin: auto;
+    overflow: auto;
+}
+
+.button1 {
+  background-color: #157F1F;
+  color: black;
+  outline-color: black;
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  display: block;
+}
+
+.button:hover {
+  background-color: #157F1F; /* Primary Green - Stand Alone Colour*/
+  background-color: #069E2D; /* Secondary Green - Colour when User Hovers*/
+  color: black;
+  outline-color: black;
+}
+
+#chart_div{
+  position: absolute;
+  overflow: hidden;
+}
+
+#exampleFormControlInput1 {
+  border-radius: 5px;
+  border-color: black;
+  background-color: #157F1F;
+}
+
+.dashIcon{
+  max-height: 170px;
+  margin-bottom: 20px;
+  fill: green;
+}
+
+.card{
+  border-radius: 20px !important;
+  border: 5px solid #157F1F !important;
+  background-color: #4D4D4D !important;
+  height: 100%;
+}
+
+.loading{
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid #157F1F;
+  animation: a1 2s linear infinite;
+}
+
+.loading::before,.loading::after{
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.loading::before{
+  border-top: 10px solid #069E2D;
+  transform: rotate(120deg);
+}
+
+.loading::after{
+  border-top: 10px solid #4C934C;
+  transform: rotate(240deg);
+}
+
+.loading span{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  color: #000;
+  text-align: center;
+  line-height: 200px;
+  animation: a2 2s linear infinite;
+}
+
+@keyframes a1 {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a2 {
+  to{
+    transform: rotate(-360deg);
+  }
+}
