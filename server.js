@@ -40,7 +40,7 @@ app.engine('hbs', handlebars({
     extname: 'hbs'
 }))
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     try {
         res.render('login', { layout: 'main' });
     } catch (err) {
@@ -270,9 +270,120 @@ app.get('/steps', (req, res) => {
 
 })
 
+
+app.get('/loader', (req, res) => {
+    try {
+        res.render('loader', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/loader2', (req, res) => {
+    try {
+        res.render('loader2', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/infoloader', (req, res) => {
+    try {
+        res.render('infoloader', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/logoutloader', (req, res) => {
+    try {
+        res.render('logoutloader', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/loader', (req, res) => {
+    try {
+        res.render('loader', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
 app.get('/stepsload', (req, res) => {
     try {
         res.render('stepsload', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/heartload', (req, res) => {
+    try {
+        res.render('heartload', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/speedload', (req, res) => {
+    try {
+        res.render('speedload', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/powerload', (req, res) => {
+    try {
+        res.render('powerload', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/incorrectlogin', (req, res) => {
+    try {
+        res.render('incorrectlogin', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/incorrectloader', (req, res) => {
+    try {
+        res.render('incorrectloader', { layout: 'main' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error')
+    }
+
+})
+
+app.get('/loginloader', (req, res) => {
+    try {
+        res.render('loginloader', { layout: 'main' });
     } catch (err) {
         console.log(err.message);
         res.status(500).send('Server Error')
@@ -301,7 +412,7 @@ app.get('/dashboard', isAuth, (req, res) => {
 app.get('/signout', (req, res) => {
     //Logs the logged in user out and redirects to the sign in page
     req.logout();
-    res.redirect('/');
+    res.redirect('/views/login');
 })
 
 //POST Signup
@@ -334,8 +445,8 @@ app.post('/signup', async (req, res) => {
 app.post('/signin', (req, res, next) => {
     try {
         passport.authenticate('local', {
-            successRedirect: '/dashboard',
-            failureRedirect: '/?incorrectLogin'
+            successRedirect: '/loader',
+            failureRedirect: '/loginloader'
         })(req, res, next)
     } catch (err) {
         console.log(err.message);

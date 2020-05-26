@@ -1,0 +1,122 @@
+<div class="boxed3"> <!--This is the box that you see on the screen which contains all of the content for the user to view -->
+
+  <div class="row">
+    <img class="w-50 h-50 mx-auto" src="images/Logo.png">
+  </div>
+
+  <div class="container"> <!-- This is the container that holds the content below -->
+    <div class="row"> <!-- The page is set into columns and rows so it becomes easy to layout the elements -->
+      <div class="col"> <!-- The page is set into columns and rows so it becomes easy to layout the elements -->
+      </div>
+
+
+</div>
+</div>
+<div class="col-12"> <!--This determines the columns that all of the content goes into, it positions the content in certain parts of the page so that it all looks professional and arranged -->
+  <div class="form-group mx-sm-3 mb-2"> <!-- This helps with the positioning and organisation of the page in general -->
+    <h1>Your Previous Heart Rate Results</h1> <!-- This is the title of the product -->
+  </div>
+
+  <html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+
+        // Load Charts and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Draw the pie chart for Sarah's pizza when Charts is loaded.
+        google.charts.setOnLoadCallback(drawLastweekChart);
+
+        // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+        google.charts.setOnLoadCallback(drawYesterdayChart);
+
+        // Callback that draws the pie chart for Sarah's pizza.
+        function drawLastweekChart() {
+
+          var data = google.visualization.arrayToDataTable([
+       ['Element', 'Heart Rate In BPM', { role: 'style' }],
+       ['1st - 10th Min', 61, '#157F1F'],
+       ['11th - 20th Min', 72, '#157F1F'],
+       ['21st - 30th Min', 78, '#157F1F'],
+       ['31st - 45th Min', 63, '#157F1F' ],
+       ['46th - 50th Min', 75, '#157F1F' ],
+       ['51st - 60th Min', 84, '#157F1F' ],
+       ['61st - 70th Min', 80, '#157F1F' ],
+       ['71st - 80th Min', 78, '#157F1F' ],
+       ['81st - 90th Min', 88, '#157F1F' ],
+    ]);
+
+          // Set chart options
+          var options = {'title':'Average Heart Rate From Last Weeks Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+                         'hAxis': {title: 'BPM', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
+                         'vAxis': {minValue:10},
+                         'backgroundColor': '#858b93',
+                         'colors': ['#157F1F', 'green'],
+                         animation:{
+      duration: 2000,
+      easing: 'out',
+      startup: true //This is the new option
+    },
+                         'width':500,
+                         'height':300};
+
+          // Instantiate and draw the chart for Sarah's pizza.
+          var chart = new google.visualization.BarChart(document.getElementById('Lastweek_chart_div'));
+          chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Anthony's pizza.
+        function drawYesterdayChart() {
+
+          var data = google.visualization.arrayToDataTable([
+       ['Element', 'Heart Rate In BPM', { role: 'style' }],
+       ['1st - 10th Min', 67, '#157F1F'],
+       ['11th - 20th Min', 78, '#157F1F'],
+       ['21st - 30th Min', 72, '#157F1F'],
+       ['31st - 45th Min', 85, '#157F1F' ],
+       ['46th - 50th Min', 70, '#157F1F' ],
+       ['51st - 60th Min', 78, '#157F1F' ],
+       ['61st - 70th Min', 84, '#157F1F' ],
+       ['71st - 80th Min', 70, '#157F1F' ],
+       ['81st - 90th Min', 79, '#157F1F' ],
+    ]);
+
+          // Set chart options
+          var options = {'title':'Average Heart Rate From Yesterdays Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+                         'hAxis': {title: 'BPM', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
+                         'vAxis': {minValue:10},
+                         'backgroundColor': '#858b93',
+                         'colors': ['#157F1F', 'green'],
+                         animation:{
+      duration: 2000,
+      easing: 'out',
+      startup: true //This is the new option
+    },
+                         'width':500,
+                         'height':300};
+
+          // Instantiate and draw the chart for Anthony's pizza.
+          var chart = new google.visualization.BarChart(document.getElementById('Yesterday_chart_div'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <!--Table and divs that hold the pie charts-->
+      <table class="columns">
+        <tr>
+          <td><div id="Lastweek_chart_div" style="border: 3px solid #000"></div></td>
+          <td><div id="Yesterday_chart_div" style="border: 3px solid #000"></div></td>
+        </tr>
+      </table>
+    </body>
+  </html>
+
+  <div class="text-center">
+    <div class="btn-group" role="group">
+      <a class="button button1" href="/heart"><i class="fas fa-heart fa-lg"></i>  Back To Heart Rate</a> <!-- This is the button on the landing page that sends the user to the contents page. Also has the icon to add some asthetics to the page -->
+  </div>
+  </div>
+  </div>
+  </div>

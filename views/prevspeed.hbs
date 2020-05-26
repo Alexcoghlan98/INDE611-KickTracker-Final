@@ -1,0 +1,128 @@
+<body>
+
+  <div class="boxed3"> <!--This is the box that you see on the screen which contains all of the content for the user to view -->
+
+    <div class="row">
+      <img class="w-50 h-50 mx-auto" src="images/Logo.png">
+    </div>
+
+    <div class="container"> <!-- This is the container that holds the content below -->
+      <div class="row"> <!-- The page is set into columns and rows so it becomes easy to layout the elements -->
+        <div class="col"> <!-- The page is set into columns and rows so it becomes easy to layout the elements -->
+        </div>
+
+
+  </div>
+  </div>
+  <div class="col-12"> <!--This determines the columns that all of the content goes into, it positions the content in certain parts of the page so that it all looks professional and arranged -->
+    <div class="form-group mx-sm-3 mb-2"> <!-- This helps with the positioning and organisation of the page in general -->
+      <h1>Your Previous Speed Results</h1> <!-- This is the title of the product -->
+    </div>
+
+    <html>
+      <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+          // Load Charts and the corechart package.
+          google.charts.load('current', {'packages':['corechart']});
+
+          // Draw the pie chart for Sarah's pizza when Charts is loaded.
+          google.charts.setOnLoadCallback(drawlastweekChart);
+
+          // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+          google.charts.setOnLoadCallback(drawyesterdayChart);
+
+          // Callback that draws the pie chart for Sarah's pizza.
+          function drawlastweekChart() {
+
+            // Create the data table for Sarah's pizza.
+            var data = google.visualization.arrayToDataTable([
+         ['Element', 'Speed in KM/H', { role: 'style' }],
+         ['1st - 10th Min', 16, '#157F1F'],
+         ['11th - 20th Min', 22, '#157F1F'],
+         ['21st - 30th Min', 16, '#157F1F'],
+         ['31st - 45th Min', 15, '#157F1F' ],
+         ['46th - 50th Min', 21, '#157F1F' ],
+         ['51st - 60th Min', 17, '#157F1F' ],
+         ['61st - 70th Min', 18, '#157F1F' ],
+         ['71st - 80th Min', 21, '#157F1F' ],
+         ['81st - 90th Min', 19, '#157F1F' ],
+      ]);
+
+            // Set chart options
+            var options = {'title':'Average Speed From Yesterdays Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+                           'hAxis': {title: 'KM/H', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
+                           'vAxis': {minValue:10},
+                           'backgroundColor': '#858b93',
+                           'colors': ['#157F1F', 'green'],
+                           animation:{
+        duration: 2000,
+        easing: 'out',
+        startup: true //This is the new option
+      },
+                           'width':500,
+                           'height':300};
+
+            // Instantiate and draw the chart for Sarah's pizza.
+            var chart = new google.visualization.BarChart(document.getElementById('lastweek_chart_div'));
+            chart.draw(data, options);
+          }
+
+          // Callback that draws the pie chart for Anthony's pizza.
+          function drawyesterdayChart() {
+
+            // Create the data table for Anthony's pizza.
+            var data = google.visualization.arrayToDataTable([
+         ['Element', 'Speed in KM/H', { role: 'style' }],
+         ['1st - 10th Min', 13, '#157F1F'],
+         ['11th - 20th Min', 18, '#157F1F'],
+         ['21st - 30th Min', 15, '#157F1F'],
+         ['31st - 45th Min', 14, '#157F1F' ],
+         ['46th - 50th Min', 22, '#157F1F' ],
+         ['51st - 60th Min', 20, '#157F1F' ],
+         ['61st - 70th Min', 17, '#157F1F' ],
+         ['71st - 80th Min', 23, '#157F1F' ],
+         ['81st - 90th Min', 19, '#157F1F' ],
+      ]);
+
+            // Set chart options
+            var options = {'title':'Average Speed From Last Weeks Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+                           'hAxis': {title: 'KM/H', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
+                           'vAxis': {minValue:10},
+                           'backgroundColor': '#858b93',
+                           'colors': ['#157F1F', 'green'],
+                           animation:{
+        duration: 2000,
+        easing: 'out',
+        startup: true //This is the new option
+      },
+                           'width':500,
+                           'height':300};
+
+            // Instantiate and draw the chart for Anthony's pizza.
+            var chart = new google.visualization.BarChart(document.getElementById('yesterday_chart_div'));
+            chart.draw(data, options);
+          }
+        </script>
+      </head>
+      <body>
+        <!--Table and divs that hold the pie charts-->
+        <table class="columns">
+          <tr>
+            <td><div id="lastweek_chart_div" style="border: 3px solid #000"></div></td>
+            <td><div id="yesterday_chart_div" style="border: 3px solid #000"></div></td>
+          </tr>
+        </table>
+      </body>
+    </html>
+
+
+
+    <div class="text-center">
+      <div class="btn-group" role="group">
+        <a class="button button1" href="/speed"><i class="fas fa-running fa-lg"></i>  Back To Speed Results</a> <!-- This is the button on the landing page that sends the user to the contents page. Also has the icon to add some asthetics to the page -->
+    </div>
+    </div>
+    </div>
+    </div>

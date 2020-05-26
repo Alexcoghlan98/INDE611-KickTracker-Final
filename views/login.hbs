@@ -14,21 +14,19 @@
           <p>KickTracker</p> <!-- This is the title of the product -->
           <h1>Data Analysis Made For You</h1> <!-- This is the tag line of the product -->
 
-          <div class="container"> <!-- This is the container that holds the content below -->
+          <div class="container">
               <div class="row">
-                <div class="col">
+                  <div class="col s6">
+                      {{> signinForm}}
                   </div>
-                <div class="col-12"> <!--This determines the columns that all of the content goes into, it positions the content in certain parts of the page so that it all looks professional and arranged -->
-                  <div class="form-group mx-sm-3 mb-2"> <!-- This helps with the positioning and organisation of the page in general -->
-            <label for="exampleFormControlInput1"></label> <!-- This is the form where the user can input their tracker code which links to their personal tracker -->
-            <input type="email" class="form-control, input-lg" id="exampleFormControlInput1" placeholder="Insert Tracker Code Here"> <!-- This lets the user know what to input in the form so that they can move onto the contents page -->
-
-            <div class="text-center">
-              <div class="btn-group" role="group">
-                <a class="button button1" href="loader.html"><i class="far fa-chart-bar fa-lg"></i>  Lets See Your Results</a> <!-- This is the button on the landing page that sends the user to the contents page. Also has the icon to add some asthetics to the page -->
+                  <div class="col s6">
+                      {{> signupForm}}
+                  </div>
+              </div>
+          </div>
                 <div class="text-center">
                   <div class="btn-group" role="group">
-                    <a class="button button1" href="infoloader.html"><i class="far fa-question-circle fa-lg"></i>  What is KickTracker?</a> <!-- This is the button on the landing page that sends the user to the contents page. Also has the icon to add some asthetics to the page -->
+                    <a class="button button1" href="/infoloader"><i class="far fa-question-circle fa-lg"></i>  What is KickTracker?</a> <!-- This is the button on the landing page that sends the user to the contents page. Also has the icon to add some asthetics to the page -->
 
 
           <!-- <div class="text-center">
