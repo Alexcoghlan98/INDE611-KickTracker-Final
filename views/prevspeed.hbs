@@ -30,17 +30,17 @@
           // Load Charts and the corechart package.
           google.charts.load('current', {'packages':['corechart']});
 
-          // Draw the pie chart for Sarah's pizza when Charts is loaded.
+          // Draw the bar chart for last weeks session when Charts is loaded.
           google.charts.setOnLoadCallback(drawlastweekChart);
 
-          // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+          // Draw the bar chart for the yesterdays when Charts is loaded.
           google.charts.setOnLoadCallback(drawyesterdayChart);
 
-          // Callback that draws the pie chart for Sarah's pizza.
+          // Callback that draws the bar chart for last weeks session
           function drawlastweekChart() {
 
-            // Create the data table for Sarah's pizza.
-            var data = google.visualization.arrayToDataTable([
+            // Create the data table for last weeks session
+            var data = google.visualization.arrayToDataTable([ {{!-- sets the data for the chart --}}
          ['Element', 'Speed in KM/H', { role: 'style' }],
          ['1st - 10th Min', 16, '#157F1F'],
          ['11th - 20th Min', 22, '#157F1F'],
@@ -54,29 +54,29 @@
       ]);
 
             // Set chart options
-            var options = {'title':'Average Speed From Yesterdays Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+            var options = {'title':'Average Speed From Yesterdays Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'}, {{!-- this all here declares the options and styling of the charts --}}
                            'hAxis': {title: 'KM/H', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
                            'vAxis': {minValue:10},
                            'backgroundColor': '#858b93',
                            'colors': ['#157F1F', 'green'],
                            animation:{
-        duration: 2000,
+        duration: 2000, {{!-- sets the animation for when the chart loads up --}}
         easing: 'out',
         startup: true //This is the new option
       },
-                           'width':500,
-                           'height':300};
+                           'width':500, {{!-- width of chart --}}
+                           'height':300}; {{!-- height of chart --}}
 
-            // Instantiate and draw the chart for Sarah's pizza.
+            // Instantiate and draw the chart for last weeks session
             var chart = new google.visualization.BarChart(document.getElementById('lastweek_chart_div'));
             chart.draw(data, options);
           }
 
-          // Callback that draws the pie chart for Anthony's pizza.
+          // Callback that draws the bar chart for yesterdays session
           function drawyesterdayChart() {
 
-            // Create the data table for Anthony's pizza.
-            var data = google.visualization.arrayToDataTable([
+            // Create the data table for yesterdays session
+            var data = google.visualization.arrayToDataTable([ {{!-- sets the data for the chart --}}
          ['Element', 'Speed in KM/H', { role: 'style' }],
          ['1st - 10th Min', 13, '#157F1F'],
          ['11th - 20th Min', 18, '#157F1F'],
@@ -90,20 +90,20 @@
       ]);
 
             // Set chart options
-            var options = {'title':'Average Speed From Last Weeks Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+            var options = {'title':'Average Speed From Last Weeks Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'}, {{!-- this all here declares the options and styling of the charts --}}
                            'hAxis': {title: 'KM/H', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
                            'vAxis': {minValue:10},
                            'backgroundColor': '#858b93',
                            'colors': ['#157F1F', 'green'],
                            animation:{
-        duration: 2000,
+        duration: 2000, {{!-- sets the animation for when the chart loads up --}}
         easing: 'out',
         startup: true //This is the new option
       },
-                           'width':500,
-                           'height':300};
+                           'width':500, {{!-- width of chart --}}
+                           'height':300}; {{!-- height of chart --}}
 
-            // Instantiate and draw the chart for Anthony's pizza.
+            // Instantiate and draw the chart for yesterdays session
             var chart = new google.visualization.BarChart(document.getElementById('yesterday_chart_div'));
             chart.draw(data, options);
           }

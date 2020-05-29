@@ -1,12 +1,12 @@
 <h1>Sign Up</h1>
 {{#if userExist}}
-<div class="card-panel red">Sorry! User Already Exists</div>
+<div class="card-panel red">Sorry! User Already Exists</div> {{!-- error message that will be displayed to the user --}}
 {{else}} {{#if userDoesNotExist}}
-<div class="card-panel green">Congrats! You are now a member with KickTracker!</div>
+<div class="card-panel green">Congrats! You are now a member with KickTracker!</div> {{!-- this message when the user successfully signs up --}}
 {{/if}}{{/if}}
 <form action="/signup" method="POST">
-    <input type="email" name="username" id="username" placeholder="Enter Username/Email">
-    <input type="password" name="password" id="password" placeholder="Enter Password">
-    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
-    <input type="submit" value="Sign Up" id="signUpSubmit" class="button button1">
+    <input type="email" name="username" id="username" placeholder="Enter Username/Email"> {{!-- the users email or username for signing up --}}
+    <input type="password" name="password" id="password" placeholder="Enter Tracker Code"> {{!-- the users tracker code input --}}
+    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Tracker Code"> {{!-- where the user confirms the tracker code --}}
+    <input type="submit" value="Sign Up" id="signUpSubmit" class="button button1"> {{!-- the button to submit when the user wants to sign up --}}
 </form>

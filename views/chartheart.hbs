@@ -20,7 +20,7 @@
     // draws it.
     function drawChart() {
 
-      var data = google.visualization.arrayToDataTable([
+      var data = google.visualization.arrayToDataTable([ {{!-- this section is the data input for the chart --}}
    ['Element', 'Heart Rate In BPM', { role: 'style' }],
    ['1st - 10th Min', 60, '#157F1F'],
    ['11th - 20th Min', 68, '#157F1F'],
@@ -34,18 +34,18 @@
 ]);
 
       // Set chart options
-      var options = {'title':'Average Heart Rate From Todays Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'},
+      var options = {'title':'Average Heart Rate From Todays Session', titleTextStyle:{fontSize:'15', fontName:'"Avenir"'}, {{!-- this all here declares the options and styling of the charts --}}
                      'hAxis': {title: 'BPM', titleTextStyle: {color: 'black',fontSize:'15',fontName:'"Avenir"'}},
                      'vAxis': {minValue:10},
                      'backgroundColor': '#858b93',
                      'colors': ['#157F1F', 'green'],
-                     animation:{
+                     animation:{ {{!-- this sets the animation for when the chart loads up --}}
   duration: 2000,
   easing: 'out',
   startup: true //This is the new option
 },
-                     'width':500,
-                     'height':300};
+                     'width':500, {{!-- height of chart --}}
+                     'height':300}; {{!-- width of chart --}}
 
 
       // Instantiate and draw our chart, passing in some options.

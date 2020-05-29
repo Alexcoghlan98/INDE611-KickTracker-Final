@@ -8,30 +8,30 @@ background-image: url(/images/grasstexture.jpg);
 
 h1 {
   text-align: center;
-  color: #157F1F;
-  font-size: 10px;
+  color: #157F1F; /* The colour of the main body text */
+  font-size: 10px; /* The size of the font */
   font-family: 'Open Sans', sans-serif; /* this is the main font that i chose for web app */
   -webkit-text-stroke-width: 1px; /* this is the outline stroke for the title text */
   -webkit-text-stroke-color: black; /* this is the colour of the outline stroke */
 }
 
 h3 {
-  text-align: center;
-  color: #ffffff;
+  text-align: center; /* This alligns the text in the center of the site */
+  color: #ffffff; /* This is the colour */
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
 }
 
 h4 {
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* This is the colour */
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
 }
 
 h5 {
   text-align: center;
-  color: #157F1F;
+  color: #157F1F; /* This is the colour */
   font-family: 'Open Sans', sans-serif;
   font-size: 55px;
   -webkit-text-stroke-width: 1px; /* this is the outline stroke for the title text */
@@ -40,13 +40,13 @@ h5 {
 
 p {
   text-align: center;
-  color: #157F1F;
-  font-size: 65px;
+  color: #157F1F; /* This is the colour */
+  font-size: 65px; /* declares the font size */
   padding-left: 0px;
   margin-bottom: auto;
   font-family: 'Open Sans', sans-serif;
-  -webkit-text-stroke-width: 2.5px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2.5px; /* this is the outline of the text */
+  -webkit-text-stroke-color: black; /* colour of the outline for the text */
 }
 
 image {
@@ -55,42 +55,41 @@ image {
   bottom: 0;
   left: 0;
   right: 0;
-  max-width: 30%;
-  max-height: 30%;
+  max-width: 30%; /* determines the width of the image */
+  max-height: 30%; /* determines the height of the image */
   margin: auto;
-  overflow: auto;
+  overflow: auto; /* makes the image responsive when the pages size is being changed */
   background-size: contain;
 }
 
 
 .boxed {
   border: 4px solid black ;
-  background-color: #4D4D4D;
-  opacity: 0.9;
+  background-color: #4D4D4D; /* This is the colour */
+  opacity: 0.9; /* this declares the opacity */
   position: fixed;
-  border-radius: 35px;
+  border-radius: 35px; /* this makes the box corners rounded */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 70%;
-    max-height: 99%;
-    margin: auto;
-    overflow: auto;
+    max-width: 70%; /* this determines the width of the box */
+    max-height: 99%; /* this determines the height of the box */
+    overflow: auto; /* this means that when the page is being shrunk or enlarged then it would be responsive to that */
 }
 
 .boxed1 {
   border: 4px solid black;
-  background-color: #090909;
+  background-color: #090909; /* This is the colour */
   position: fixed;
     top: 40%;
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 30%;
-    max-height: 35%;
+    max-width: 30%; /* declares the width */
+    max-height: 35%; /* declares the height */
     margin: auto;
-    overflow: auto;
+    overflow: auto; /* makes the box responsive */
   /* width: 400px;
   height: 350px;
   margin-left: 190px;
@@ -99,23 +98,23 @@ image {
 
 .boxed2 {
   border: 4px solid black ;
-  background-color: #4D4D4D;
-  opacity: 0.9;
+  background-color: #4D4D4D; /* This is the colour */
+  opacity: 0.9; /* this declares the opacity of the box */
   position: fixed;
-  border-radius: 35px;
+  border-radius: 35px; /* rounds the corners of the box */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 25%;
-    max-height: 30%;
+    max-width: 25%; /* determines width */
+    max-height: 30%; /* determines height */
     margin: auto;
     overflow: auto;
 }
 
 .boxed3 {
   border: 4px solid black ;
-  background-color: #4D4D4D;
+  background-color: #4D4D4D; /* This is the colour */
   opacity: 0.9;
   position: fixed;
   border-radius: 35px;
@@ -130,7 +129,7 @@ image {
 }
 
 .button1 {
-  background-color: #157F1F;
+  background-color: #157F1F; /* This is the colour */
   color: black;
   outline-color: black;
   padding: 20px 40px;
@@ -155,13 +154,13 @@ image {
 .chart_div{
   position: absolute;
   overflow: hidden;
-  margin-left: 100px;
+  margin-left: 100px; /* positions the chart */
 }
 
 .dashIcon{
   max-height: 170px;
   margin-bottom: 20px;
-  fill: green;
+  fill: green; /* changes the colour of the icon */
 }
 
 .card{
@@ -176,8 +175,8 @@ image {
   height: 200px;
   box-sizing: border-box;
   border-radius: 50%;
-  border-top: 10px solid #157F1F;
-  animation: a1 2s linear infinite;
+  border-top: 10px solid #157F1F; /* sorts the colour out for the loader */
+  animation: a1 2s linear infinite; /* declares the animation */
 }
 
 .loading::before,.loading::after{
@@ -192,12 +191,12 @@ image {
 }
 
 .loading::before{
-  border-top: 10px solid #069E2D;
-  transform: rotate(120deg);
+  border-top: 10px solid #069E2D; /* colour */
+  transform: rotate(120deg); /* This determines the rotation of the loading screen */
 }
 
 .loading::after{
-  border-top: 10px solid #4C934C;
+  border-top: 10px solid #4C934C; /* colour */
   transform: rotate(240deg);
 }
 
@@ -213,7 +212,7 @@ image {
 
 @keyframes a1 {
   to{
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* This rotates the loading screens */
   }
 }
 

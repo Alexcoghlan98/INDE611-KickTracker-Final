@@ -40,7 +40,7 @@ app.engine('hbs', handlebars({
     extname: 'hbs'
 }))
 
-app.get('/login', (req, res) => {
+app.get('/login', (req, res) => { //links the login page to the server
     try {
         res.render('login', { layout: 'main' });
     } catch (err) {
@@ -50,7 +50,7 @@ app.get('/login', (req, res) => {
 
 })
 
-app.get('/chartheart', (req, res) => {
+app.get('/chartheart', (req, res) => { //links the chart page to the server
     try {
         res.render('chartheart', { layout: 'main' });
     } catch (err) {
@@ -60,7 +60,7 @@ app.get('/chartheart', (req, res) => {
 
 })
 
-app.get('/chartpower', (req, res) => {
+app.get('/chartpower', (req, res) => { //links the chart page to the server
     try {
         res.render('chartpower', { layout: 'main' });
     } catch (err) {
@@ -70,7 +70,7 @@ app.get('/chartpower', (req, res) => {
 
 })
 
-app.get('/chartspeed', (req, res) => {
+app.get('/chartspeed', (req, res) => { //links the chart page to the server
     try {
         res.render('chartspeed', { layout: 'main' });
     } catch (err) {
@@ -80,7 +80,7 @@ app.get('/chartspeed', (req, res) => {
 
 })
 
-app.get('/chartsteps', (req, res) => {
+app.get('/chartsteps', (req, res) => { //links the chart page to the server
     try {
         res.render('chartsteps', { layout: 'main' });
     } catch (err) {
@@ -90,7 +90,7 @@ app.get('/chartsteps', (req, res) => {
 
 })
 
-app.get('/contents', (req, res) => {
+app.get('/contents', (req, res) => { //links the contents page to the server
     try {
         res.render('contents', { layout: 'main' });
     } catch (err) {
@@ -100,7 +100,7 @@ app.get('/contents', (req, res) => {
 
 })
 
-app.get('/heart', (req, res) => {
+app.get('/heart', (req, res) => { //links the heart page to the server
     try {
         res.render('heart', { layout: 'main' });
     } catch (err) {
@@ -110,7 +110,7 @@ app.get('/heart', (req, res) => {
 
 })
 
-app.get('/heartload', (req, res) => {
+app.get('/heartload', (req, res) => { //links the heart loader to the server
     try {
         res.render('heartload', { layout: 'main' });
     } catch (err) {
@@ -120,7 +120,7 @@ app.get('/heartload', (req, res) => {
 
 })
 
-app.get('/index', (req, res) => {
+app.get('/index', (req, res) => { //links the index page to the server
     try {
         res.render('index', { layout: 'main' });
     } catch (err) {
@@ -130,7 +130,7 @@ app.get('/index', (req, res) => {
 
 })
 
-app.get('/info', (req, res) => {
+app.get('/info', (req, res) => { //links the info page to the server
     try {
         res.render('info', { layout: 'main' });
     } catch (err) {
@@ -140,7 +140,7 @@ app.get('/info', (req, res) => {
 
 })
 
-app.get('/infoloader', (req, res) => {
+app.get('/infoloader', (req, res) => { //links the infomation loader to the server
     try {
         res.render('infoloader', { layout: 'main' });
     } catch (err) {
@@ -150,7 +150,7 @@ app.get('/infoloader', (req, res) => {
 
 })
 
-app.get('/loader', (req, res) => {
+app.get('/loader', (req, res) => { //links the loading page to the server
     try {
         res.render('loader', { layout: 'main' });
     } catch (err) {
@@ -170,7 +170,7 @@ app.get('/loader2', (req, res) => {
 
 })
 
-app.get('/logoutloader', (req, res) => {
+app.get('/logoutloader', (req, res) => { //links the logout loading screen to the server
     try {
         res.render('logoutloader', { layout: 'main' });
     } catch (err) {
@@ -180,7 +180,7 @@ app.get('/logoutloader', (req, res) => {
 
 })
 
-app.get('/power', (req, res) => {
+app.get('/power', (req, res) => { //links the power page to the server
     try {
         res.render('power', { layout: 'main' });
     } catch (err) {
@@ -200,7 +200,7 @@ app.get('/powerload', (req, res) => {
 
 })
 
-app.get('/prevheart', (req, res) => {
+app.get('/prevheart', (req, res) => { //links the previous chart page to the server
     try {
         res.render('prevheart', { layout: 'main' });
     } catch (err) {
@@ -210,7 +210,7 @@ app.get('/prevheart', (req, res) => {
 
 })
 
-app.get('/prevpower', (req, res) => {
+app.get('/prevpower', (req, res) => { //links the previous chart page to the server
     try {
         res.render('prevpower', { layout: 'main' });
     } catch (err) {
@@ -220,7 +220,7 @@ app.get('/prevpower', (req, res) => {
 
 })
 
-app.get('/prevspeed', (req, res) => {
+app.get('/prevspeed', (req, res) => { //links the previous chart page to the server
     try {
         res.render('prevspeed', { layout: 'main' });
     } catch (err) {
@@ -230,7 +230,7 @@ app.get('/prevspeed', (req, res) => {
 
 })
 
-app.get('/prevsteps', (req, res) => {
+app.get('/prevsteps', (req, res) => { //links the previous chart page to the server
     try {
         res.render('prevsteps', { layout: 'main' });
     } catch (err) {
@@ -240,7 +240,7 @@ app.get('/prevsteps', (req, res) => {
 
 })
 
-app.get('/speed', (req, res) => {
+app.get('/speed', (req, res) => { //links the speed page to the server
     try {
         res.render('speed', { layout: 'main' });
     } catch (err) {
@@ -260,7 +260,7 @@ app.get('/speedload', (req, res) => {
 
 })
 
-app.get('/steps', (req, res) => {
+app.get('/steps', (req, res) => { //links the steps page to the server
     try {
         res.render('steps', { layout: 'main' });
     } catch (err) {
@@ -445,8 +445,8 @@ app.post('/signup', async (req, res) => {
 app.post('/signin', (req, res, next) => {
     try {
         passport.authenticate('local', {
-            successRedirect: '/loader',
-            failureRedirect: '/loginloader'
+            successRedirect: '/loader', //sends the user here when they are successful in signing in
+            failureRedirect: '/loginloader' //sends the user here when they are unsuccessful in signing in
         })(req, res, next)
     } catch (err) {
         console.log(err.message);
