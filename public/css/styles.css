@@ -69,6 +69,7 @@ image {
   opacity: 0.9; /* this declares the opacity */
   position: fixed;
   border-radius: 35px; /* this makes the box corners rounded */
+  margin-left: 150px;
     top: 0;
     bottom: 0;
     left: 0;
